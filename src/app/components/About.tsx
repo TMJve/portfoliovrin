@@ -35,7 +35,6 @@ export default function About() {
             A Passion for Brand Storytelling
           </h2>
           
-          {/* --- CHANGE IS ON THIS LINE --- */}
           <p className="mt-6 font-sans leading-relaxed text-[#4B4B4B]/80">
             From a young age, I&apos;ve been fascinated by how iconic brands create loyalty and tell compelling stories. This curiosity led me to pursue a degree in Global Business Marketing, where I&apos;ve honed my skills in understanding the &lsquo;why&rsquo; behind consumer behavior.
           </p>
@@ -44,8 +43,9 @@ export default function About() {
           </p>
         </motion.div>
 
+        {/* --- CHANGE IS ON THIS LINE --- */}
         <motion.div 
-          className="w-full md:w-12"
+          className="w-full md:w-1/2" // Changed md:w-12 to md:w-1/2
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
