@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Her Portfolio", // You can update this now
-  description: "A professional portfolio website", // And this
+  title: "Vrinly Shevanya", // You can update this now
+  description: "Aspiring Professional Sales Specialist", // And this
 };
 
 export default function RootLayout({

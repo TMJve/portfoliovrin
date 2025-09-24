@@ -7,7 +7,7 @@ import { Mail, Linkedin } from 'lucide-react';
 const contactLinks = [
   {
     name: "Email",
-    href: "mailto:vrinly.shevanya@example.com",
+    href: "mailto:vrinly17@gmail.com",
     icon: <Mail size={24} />
   },
   {

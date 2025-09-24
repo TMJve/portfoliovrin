@@ -3,52 +3,50 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Download } from 'lucide-react';
 
-// --- Project Data ---
-// You can easily update this array with her actual projects
+// --- Project Data: Updated with your exact PDF filenames ---
 const projectsData = [
   {
-    title: "Luxury Brand Market Entry Strategy",
-    description: "A comprehensive analysis of the Southeast Asian market for a European luxury brand, identifying key demographics and a multi-channel launch plan.",
-    image: "/images/project-1.jpg", // Create /public/images/ and add project images
-    tags: ["Market Research", "Brand Strategy", "Competitive Analysis"],
+    title: "Digital Marketing Final Report",
+    description: "Evaluating the effectiveness of Fore Coffee's digital marketing on sales and customer engagement.",
+    image: "/images/project-1.jpg",
+    tags: ["Digital Marketing", "Sales Analysis", "Customer Engagement"],
+    pdfUrl: "/pdfs/digi-marketing-finalreport.pdf" // <-- Updated
   },
   {
-    title: "Consumer Behavior Data Analysis",
-    description: "Utilized SPSS and Excel to analyze survey data, uncovering key insights into purchasing habits that led to a 15% projected increase in engagement.",
+    title: "Loro Piana Marketing Analysis",
+    description: "Analysis of Loro Piana's marketing effectiveness and the potential for developing strategies based on artificial intelligence.",
     image: "/images/project-2.jpg",
-    tags: ["Data Analysis", "SPSS", "Consumer Insights"],
+    tags: ["Data Analysis", "AI in Marketing", "Brand Strategy"],
+    pdfUrl: "/pdfs/marketing-data.pdf" // <-- Updated
   },
   {
-    title: "Digital Marketing Campaign for a Startup",
-    description: "Developed and executed a social media and content marketing campaign, resulting in a 40% increase in online visibility and lead generation.",
+    title: "AI Integration in CRM (Sephora)",
+    description: "Optimizing Sephora's Customer Relationship Management through the integration of Artificial Intelligence.",
     image: "/images/project-3.jpg",
-    tags: ["Digital Marketing", "Social Media", "Content Creation"],
+    tags: ["CRM", "Artificial Intelligence", "Customer Experience"],
+    pdfUrl: "/pdfs/scrm.pdf" // <-- Updated
   },
   {
-    title: "Sales Funnel Optimization",
-    description: "Mapped the customer journey and identified key drop-off points, proposing a revised sales funnel strategy to improve conversion rates.",
+    title: "Consumer Preference Statistics",
+    description: "A statistical study of consumer preferences for Nasi Goreng, Sate Ayam, and Rendang across Sumatra, Java, and Bali.",
     image: "/images/project-4.jpg",
-    tags: ["Sales Strategy", "Customer Journey", "Conversion Optimization"],
+    tags: ["Business Statistics", "Consumer Research", "Data Analysis"],
+    pdfUrl: "/pdfs/business.pdf" // <-- Updated
   },
 ];
 
 // --- Animation Variants ---
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2, // This will make each child animate in 0.2s after the previous one
-    },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
 };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
-
 
 export default function Projects() {
   return (
@@ -67,38 +65,43 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        {/* Projects Grid */}
         <motion.div 
           className="mt-16 grid grid-cols-1 gap-12 md:grid-cols-2"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }} // Trigger when 20% of the grid is in view
+          viewport={{ once: true, amount: 0.2 }}
         >
           {projectsData.map((project, index) => (
             <motion.div 
               key={index} 
-              className="group overflow-hidden rounded-lg bg-white shadow-lg transition-shadow hover:shadow-2xl"
+              className="group flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-shadow hover:shadow-2xl"
               variants={itemVariants}
             >
               <div className="relative h-56 w-full">
-                <Image 
-                  src={project.image} 
-                  alt={project.title} 
-                  layout="fill" 
-                  objectFit="cover" 
-                  className="transition-transform duration-500 group-hover:scale-105"
-                />
+                <Image src={project.image} alt={project.title} layout="fill" objectFit="cover" className="transition-transform duration-500 group-hover:scale-105" />
               </div>
-              <div className="p-6">
+              <div className="flex flex-1 flex-col p-6">
                 <h3 className="font-sans text-xl font-bold text-[#4B4B4B]">{project.title}</h3>
-                <p className="mt-3 font-sans text-sm leading-relaxed text-[#4B4B4B]/80">{project.description}</p>
+                <p className="mt-3 flex-1 font-sans text-sm leading-relaxed text-[#4B4B4B]/80">{project.description}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span key={tag} className="rounded-full bg-[#E0BFB8]/50 px-3 py-1 text-xs font-medium text-[#4B4B4B]">
                       {tag}
                     </span>
                   ))}
+                </div>
+                <div className="mt-6">
+                  <a
+                    href={project.pdfUrl}
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#4B4B4B] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#4B4B4B]/80"
+                  >
+                    <Download size={16} />
+                    View Report
+                  </a>
                 </div>
               </div>
             </motion.div>

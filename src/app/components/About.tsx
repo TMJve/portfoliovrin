@@ -35,6 +35,7 @@ export default function About() {
             A Passion for Brand Storytelling
           </h2>
           
+          {/* --- CHANGE IS ON THIS LINE --- */}
           <p className="mt-6 font-sans leading-relaxed text-[#4B4B4B]/80">
             From a young age, I&apos;ve been fascinated by how iconic brands create loyalty and tell compelling stories. This curiosity led me to pursue a degree in Global Business Marketing, where I&apos;ve honed my skills in understanding the &lsquo;why&rsquo; behind consumer behavior.
           </p>
@@ -44,14 +45,13 @@ export default function About() {
         </motion.div>
 
         <motion.div 
-          className="w-full md:w-1/2"
+          className="w-full md:w-12"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
           <h3 className="font-sans text-2xl font-bold text-[#4B4B4B]">My Expertise</h3>
-          {/* --- CHANGE IS ON THIS LINE --- */}
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {skills.map((skill) => (
               <div key={skill} className="rounded-lg bg-white p-4 shadow-sm">

@@ -2,7 +2,8 @@
 "use client";
 
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react'; // <-- Import Menu and X icons
+import Image from 'next/image'; // <-- 1. Import the Image component
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,13 +18,21 @@ export default function Navbar() {
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md">
         <div className="container mx-auto flex h-20 items-center justify-between px-6">
-          <a href="#" className="font-sans text-lg font-bold tracking-wider text-[#4B4B4B]">
-            Vrinly Shevanya
+          
+          {/* --- 2. Replace the text with the Image component --- */}
+          <a href="#">
+            <Image
+              src="/logo.png" // The path to your logo in the /public folder
+              alt="Vrinly Shevanya Logo"
+              width={140}   // Adjust the width as needed
+              height={40}  // Adjust the height as needed
+              priority     // Helps load the logo faster
+            />
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden items-center space-x-8 md:flex">
-            {navLinks.slice(0, 2).map((link) => ( // Show "About" and "Projects"
+            {navLinks.slice(0, 2).map((link) => (
               <a key={link.name} href={link.href} className="group relative font-sans text-sm font-medium text-[#4B4B4B] transition-colors hover:text-[#4B4B4B]/80">
                 {link.name}
                 <span className="absolute bottom-0 left-1/2 h-[1px] w-0 -translate-x-1/2 bg-[#E0BFB8] transition-all duration-300 group-hover:w-full"></span>
@@ -55,7 +64,7 @@ export default function Navbar() {
                 key={link.name} 
                 href={link.href} 
                 className="font-sans text-2xl font-medium text-[#4B4B4B]"
-                onClick={() => setIsOpen(false)} // Close menu on link click
+                onClick={() => setIsOpen(false)}
               >
                 {link.name}
               </a>
