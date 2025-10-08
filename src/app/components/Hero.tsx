@@ -26,7 +26,12 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <a href="/CV Vrinly.pdf" download className="rounded-full bg-[#E0BFB8] px-8 py-3 font-sans font-medium text-white shadow-lg transition-shadow hover:shadow-xl">
+              <a
+                href="https://drive.google.com/drive/folders/1U05vwHlNLRJnc_VAAYupW-WJPoEEqg72"
+                // target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-[#E0BFB8] px-8 py-3 font-sans font-medium text-white shadow-lg transition-shadow hover:shadow-xl"
+              >
                 Download CV
               </a>
             </motion.div>

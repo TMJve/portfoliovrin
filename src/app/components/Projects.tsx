@@ -11,7 +11,7 @@ const projectsData = [
     title: "Digital Marketing Final Report",
     description: "Evaluating the effectiveness of Fore Coffee's digital marketing on sales and customer engagement.",
     image: "/pdfs_image/lap1.jpeg", // <-- Updated
-    tags: ["Digital Marketing", "Sales Analysis", "Customer Engagement"],
+    tags: ["Digital marketing analysis", "engagement analysis", "content creation"],
     pdfUrl: "/pdfs/digi-marketing-finalreport.pdf"
   },
   {
@@ -25,14 +25,14 @@ const projectsData = [
     title: "AI Integration in CRM (Sephora)",
     description: "Optimizing Sephora's Customer Relationship Management through the integration of Artificial Intelligence.",
     image: "/pdfs_image/lap3.jpeg", // <-- Updated
-    tags: ["CRM", "Artificial Intelligence", "Customer Experience"],
+    tags: ["Omnichannel", "customer journey", "CRM optimization"],
     pdfUrl: "/pdfs/scrm.pdf"
   },
   {
     title: "Consumer Preference Statistics",
     description: "A statistical study of consumer preferences for Nasi Goreng, Sate Ayam, and Rendang across Sumatra, Java, and Bali.",
     image: "/pdfs_image/lap4.jpeg", // <-- Updated
-    tags: ["Business Statistics", "Consumer Research", "Data Analysis"],
+    tags: ["market research", "brand strategy", "competitive analysis"],
     pdfUrl: "/pdfs/business.pdf"
   },
 ];
