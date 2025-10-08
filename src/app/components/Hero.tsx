@@ -15,7 +15,6 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
           >
-            {/* Adjusted text size for mobile */}
             <h1 className="font-sans text-4xl font-bold tracking-tight text-[#4B4B4B] lg:text-6xl">
               Hi, I am Vrinly Shevanya.
             </h1>
@@ -27,7 +26,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <a href="/Vrinly_Shevanya_Resume.pdf" download className="rounded-full bg-[#E0BFB8] px-8 py-3 font-sans font-medium text-white shadow-lg transition-shadow hover:shadow-xl">
+              <a href="/CV Vrinly.pdf" download className="rounded-full bg-[#E0BFB8] px-8 py-3 font-sans font-medium text-white shadow-lg transition-shadow hover:shadow-xl">
                 Download CV
               </a>
             </motion.div>
@@ -39,9 +38,8 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
           >
-            {/* Made image smaller on mobile */}
             <div className="relative h-64 w-64 overflow-hidden rounded-full ring-8 ring-[#E0BFB8]/50 md:h-80 md:w-80">
-              <Image src="/images/professional-photo.jpg" alt="Professional portrait of Vrinly Shevanya" layout="fill" objectFit="cover" priority />
+              <Image src="/pfp.jpeg" alt="Professional portrait of Vrinly Shevanya" layout="fill" objectFit="cover" priority />
             </div>
           </motion.div>
 

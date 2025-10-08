@@ -5,35 +5,35 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
 
-// --- Project Data: Updated with your exact PDF filenames ---
+// --- Project Data: Updated with your new image paths ---
 const projectsData = [
   {
     title: "Digital Marketing Final Report",
     description: "Evaluating the effectiveness of Fore Coffee's digital marketing on sales and customer engagement.",
-    image: "/images/project-1.jpg",
+    image: "/pdfs_image/lap1.jpeg", // <-- Updated
     tags: ["Digital Marketing", "Sales Analysis", "Customer Engagement"],
-    pdfUrl: "/pdfs/digi-marketing-finalreport.pdf" // <-- Updated
+    pdfUrl: "/pdfs/digi-marketing-finalreport.pdf"
   },
   {
     title: "Loro Piana Marketing Analysis",
     description: "Analysis of Loro Piana's marketing effectiveness and the potential for developing strategies based on artificial intelligence.",
-    image: "/images/project-2.jpg",
+    image: "/pdfs_image/lap2.jpeg", // <-- Updated
     tags: ["Data Analysis", "AI in Marketing", "Brand Strategy"],
-    pdfUrl: "/pdfs/marketing-data.pdf" // <-- Updated
+    pdfUrl: "/pdfs/marketing-data.pdf"
   },
   {
     title: "AI Integration in CRM (Sephora)",
     description: "Optimizing Sephora's Customer Relationship Management through the integration of Artificial Intelligence.",
-    image: "/images/project-3.jpg",
+    image: "/pdfs_image/lap3.jpeg", // <-- Updated
     tags: ["CRM", "Artificial Intelligence", "Customer Experience"],
-    pdfUrl: "/pdfs/scrm.pdf" // <-- Updated
+    pdfUrl: "/pdfs/scrm.pdf"
   },
   {
     title: "Consumer Preference Statistics",
     description: "A statistical study of consumer preferences for Nasi Goreng, Sate Ayam, and Rendang across Sumatra, Java, and Bali.",
-    image: "/images/project-4.jpg",
+    image: "/pdfs_image/lap4.jpeg", // <-- Updated
     tags: ["Business Statistics", "Consumer Research", "Data Analysis"],
-    pdfUrl: "/pdfs/business.pdf" // <-- Updated
+    pdfUrl: "/pdfs/business.pdf"
   },
 ];
 

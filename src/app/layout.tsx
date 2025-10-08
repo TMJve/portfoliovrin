@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vrinly Shevanya", // You can update this now
-  description: "Aspiring Professional Sales Specialist", // And this
+  title: "Vrinly Shevanya", 
+  description: "Aspiring Professional Sales Specialist", 
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar /> {/* <-- 2. ADD THE NAVBAR COMPONENT HERE */}
+        <Navbar /> 
         {children}
       </body>
     </html>
